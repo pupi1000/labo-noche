@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: tsi-agent-lab
+Version: 1.0.0
+Summary: Laboratorio didactico de agentes para Taller de Sistemas Inteligentes
+Requires-Python: >=3.12
+Requires-Dist: streamlit>=1.42
+Requires-Dist: langgraph>=0.2
+Requires-Dist: langchain-core>=0.3
+Requires-Dist: langchain-openai>=0.3
+Requires-Dist: langchain-ollama>=0.3
+Requires-Dist: pandas>=2.2
+Requires-Dist: python-dotenv>=1.0
+Requires-Dist: openai>=1.68
+Requires-Dist: azure-identity>=1.19
