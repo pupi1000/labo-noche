@@ -1,4 +1,7 @@
-from __future__ import annotations
+from langchain_core.messages import SystemMessage
+from langchain_core.tools import StructuredTool
+from langgraph.graph import END, START, MessagesState, StateGraph
+from langgraph.prebuilt import ToolNode
 
 from .config import Settings
 from .prompts import SYSTEM_PROMPT
@@ -7,11 +10,6 @@ from .tool_registry import get_domain_tools
 
 
 def build_graph(provider: str, settings: Settings | None = None):
-    from langchain_core.messages import SystemMessage
-    from langchain_core.tools import StructuredTool
-    from langgraph.graph import END, START, MessagesState, StateGraph
-    from langgraph.prebuilt import ToolNode
-
     s = settings or Settings()
     model = build_chat_model(provider, s)
     domain_tools = get_domain_tools(s.enable_student_extension)
